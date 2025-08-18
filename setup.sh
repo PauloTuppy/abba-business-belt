@@ -34,22 +34,34 @@ pip install -r requirements.txt
 echo -e "${YELLOW}📦 Installing Node.js dependencies...${NC}"
 npm install
 
-# Create .env file if it doesn't exist
-if [ ! -f .env ]; then
-    echo -e "${YELLOW}📝 Creating .env file from template...${NC}"
-    cp .env.example .env
-    echo -e "${RED}⚠️  Please update .env file with your API keys${NC}"
-else
-    echo -e "${GREEN}✅ .env file already exists${NC}"
-fi
+# Create .env file with OpenAI API key
+echo -e "${YELLOW}📝 Creating .env file with API keys...${NC}"
+cat > .env << EOF
+# OpenAI Configuration
+OPENAI_API_KEY=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
+
+# Supabase Configuration
+SUPABASE_URL=https://vfzlbtojeqxkkskldrur.supabase.co
+SUPABASE_ANON_KEY=your-supabase-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
+
+# ElevenLabs Configuration (for voice features)
+ELEVENLABS_API_KEY=your-elevenlabs-api-key
+
+# Application Settings
+DEBUG=true
+PORT=8000
+HOST=0.0.0.0
+EOF
+
+echo -e "${GREEN}✅ .env file created with OpenAI API key${NC}"
 
 echo -e "${GREEN}🎉 Setup complete!${NC}"
 echo ""
 echo -e "${BLUE}📋 Next steps:${NC}"
-echo "1. Update your .env file with API keys"
-echo "2. Run: supabase login"
-echo "3. Run: supabase link --project-ref vfzlbtojeqxkkskldrur"
-echo "4. Run: supabase functions deploy business-ai-agent"
+echo "1. Run: supabase login"
+echo "2. Run: supabase link --project-ref vfzlbtojeqxkkskldrur"
+echo "3. Run: supabase functions deploy business-ai-agent"
 echo ""
 echo -e "${BLUE}🚀 To start development:${NC}"
 echo "Frontend: npm run dev"

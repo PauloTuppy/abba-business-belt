@@ -1,0 +1,42 @@
+image: gitpod/workspace-full
+
+tasks:
+  - name: Setup Environment
+    init: |
+      # Install Supabase CLI
+      npm install -g supabase
+      
+      # Install Python dependencies
+      pip install -r requirements.txt
+      
+      # Install Node.js dependencies
+      npm install
+      
+      echo "🚀 Environment setup complete!"
+      echo "📋 Next steps:"
+      echo "1. Set up your environment variables in .env"
+      echo "2. Run 'supabase login' to authenticate"
+      echo "3. Run 'supabase link --project-ref vfzlbtojeqxkkskldrur' to link project"
+      echo "4. Run 'supabase functions deploy business-ai-agent' to deploy Edge Functions"
+    command: |
+      echo "🎯 abbā Business Belt Application"
+      echo "Ready for development!"
+
+ports:
+  - port: 8000
+    onOpen: notify
+    description: Python Backend Server
+  - port: 3000
+    onOpen: notify
+    description: React Frontend Development Server
+  - port: 54321
+    onOpen: ignore
+    description: Supabase Local API
+
+vscode:
+  extensions:
+    - ms-python.python
+    - bradlc.vscode-tailwindcss
+    - esbenp.prettier-vscode
+    - ms-vscode.vscode-typescript-next
+    - supabase.supabase

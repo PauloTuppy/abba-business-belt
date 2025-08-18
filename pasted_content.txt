@@ -1,0 +1,89 @@
+~ $ chmod 400 /caminho/para/seu/abba-key-pair.pem
+chmod: cannot access '/caminho/para/seu/abba-key-pair.pem': No such file or directory
+~ $ 
+~ $ 
+~ $ ssh -i /caminho/para/seu/abba-key-pair.pem ubuntu@3.134.102.155
+Warning: Identity file /caminho/para/seu/abba-key-pair.pem not accessible: No such file or directory.
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install -y python3.11 python3-pip python3.11-venv
+
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+sudo npm install -g pnpm
+
+sudo apt install -y nginx
+
+sudo apt install -y git
+
+
+
+
+ssh: connect to host 3.134.102.155 port 22: Connection timed out
+~ $ 
+~ $ sudo apt update && sudo apt upgrade -y
+sudo: apt: command not found
+~ $ 
+~ $ sudo apt install -y python3.11 python3-pip python3.11-venv
+sudo: apt: command not found
+~ $ 
+~ $ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+Error: This script is only supported on Debian-based systems.
+~ $ sudo apt-get install -y nodejs
+sudo: apt-get: command not found
+~ $ 
+~ $ sudo npm install -g pnpm
+
+sudo apt install -y nginx
+
+sudo apt install -y git
+
+
+
+
+⠸
+
+added 1 package in 3s
+
+1 package is looking for funding
+  run `npm fund` for details
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.5.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.5.2
+npm notice To update run: npm install -g npm@11.5.2
+npm notice
+~ $ 
+~ $ npm instal -g npm@11.5.2
+npm error code EACCES
+npm error syscall rename
+npm error path /usr/lib/nodejs20/lib/node_modules/npm
+npm error dest /usr/lib/nodejs20/lib/node_modules/.npm-9AxhtJBa
+npm error errno -13
+npm error Error: EACCES: permission denied, rename '/usr/lib/nodejs20/lib/node_modules/npm' -> '/usr/lib/nodejs20/lib/node_modules/.npm-9AxhtJBa'
+npm error     at async Object.rename (node:internal/fs/promises:782:10)
+npm error     at async moveFile (/usr/lib/nodejs20/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+npm error     at async Promise.allSettled (index 0)
+npm error     at async [reifyPackages] (/usr/lib/nodejs20/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+npm error     at async Arborist.reify (/usr/lib/nodejs20/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+npm error     at async Install.exec (/usr/lib/nodejs20/lib/node_modules/npm/lib/commands/install.js:150:5)
+npm error     at async Npm.exec (/usr/lib/nodejs20/lib/node_modules/npm/lib/npm.js:207:9)
+npm error     at async module.exports (/usr/lib/nodejs20/lib/node_modules/npm/lib/cli/entry.js:74:5) {
+npm error   errno: -13,
+npm error   code: 'EACCES',
+npm error   syscall: 'rename',
+npm error   path: '/usr/lib/nodejs20/lib/node_modules/npm',
+npm error   dest: '/usr/lib/nodejs20/lib/node_modules/.npm-9AxhtJBa'
+npm error }
+npm error
+npm error The operation was rejected by your operating system.
+npm error It is likely you do not have the permissions to access this file as the current user
+npm error
+npm error If you believe this might be a permissions issue, please double-check the
+npm error permissions of the file and its containing directories, or try running
+npm error the command again as root/Administrator.
+npm error A complete log of this run can be found in: /home/cloudshell-user/.npm/_logs/2025-08-15T13_48_09_001Z-debug-0.log
+~ $ ssh -i /caminho/para/seu/abba-key-pair.pem ubuntu@3.134.102.155
+Warning: Identity file /caminho/para/seu/abba-key-pair.pem not accessible: No such file or directory.
+                

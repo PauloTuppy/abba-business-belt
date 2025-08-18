@@ -1,0 +1,33 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+
+# AI and ML
+openai==1.3.0
+anthropic==0.7.0
+
+# Audio Processing
+elevenlabs==0.2.26
+
+# HTTP Requests
+requests==2.31.0
+httpx==0.25.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Database
+supabase==2.0.0
+psycopg2-binary==2.9.7
+
+# Utilities
+pydantic==2.5.0
+python-jose==3.3.0
+passlib==1.7.4
+bcrypt==4.0.1
+
+# Development
+pytest==7.4.0
+black==23.9.1
+flake8==6.1.0

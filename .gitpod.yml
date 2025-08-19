@@ -39,4 +39,4 @@ vscode:
     - bradlc.vscode-tailwindcss
     - esbenp.prettier-vscode
     - ms-vscode.vscode-typescript-next
-    - supabase.supabase
+    # - supabase.supabase   # not yet available on Open VSX
